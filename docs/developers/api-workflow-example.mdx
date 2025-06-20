@@ -1,0 +1,24 @@
+---
+title: "Workflow API Example"
+icon: "server"
+---
+
+This guide shows how to create and modify a workflow using the REST API. The code
+is available under `examples/api-workflows`.
+
+### Steps
+
+1. **Create a project** using `POST /v1/projects`.
+2. **Create a flow** with `POST /v1/flows` and provide the project id.
+3. **Update the trigger** using `POST /v1/flows/{id}` with the `UPDATE_TRIGGER` operation.
+4. **Add or update actions** using `ADD_ACTION` or `UPDATE_ACTION` operations.
+
+Run the example script:
+
+```bash
+export API_URL="http://localhost:3000/api/v1"
+export API_KEY="YOUR_API_KEY"
+node examples/api-workflows/workflow-example.js
+```
+
+Refer to the [OpenAPI specification](../openapi.json) for all available fields.
